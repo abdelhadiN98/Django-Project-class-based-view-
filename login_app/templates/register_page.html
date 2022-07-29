@@ -1,0 +1,12 @@
+<div class="container py-5">
+	{% if form.errors %}
+	<p>{{form.errors}} </p>
+	{% endif %}
+	<form action="register" method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<br/>
+		<br/>
+		<button type="submit">Sign up</button>
+	</form>
+</div>
